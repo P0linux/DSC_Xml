@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xsd:element name="Plane">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Model" type="xs:string" />
+        <xsd:element name="Origin" type="xs:string" />
+        <xsd:element name="Chars">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="PlaneChar" minOccurs="1" maxOccurs="unbounded">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="Type">
+                                    <xsd:simpleType>
+                                        <xsd:restriction base="xsd:string">
+                                            <xsd:enumeration value="Support" />
+                                            <xsd:enumeration value="Escort" />
+                                            <xsd:enumeration value="Fighter" />
+                                            <xsd:enumeration value="Interceptor" />
+                                            <xsd:enumeration value="Scout" />
+                                        </xsd:restriction>
+                                    </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="PlaceNumber">
+                                    <xsd:simpleType>
+                                        <xsd:restriction base="xsd:integer">
+                                            <xsd:minInclusive value="1" />
+                                            <xsd:maxInclusive value="2" />
+                                        </xsd:restriction>
+                                    </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="HasAmmunition" type="xsd:boolean"/>
+                                <xsd:element name="RocketNumber">
+                                    <xsd:simpleType>
+                                        <xsd:restriction base="xsd:integer">
+                                            <xsd:minInclusive value="0" />
+                                            <xsd:maxInclusive value="10" />
+                                        </xsd:restriction>
+                                    </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="HasRadar" type="xsd:boolean" />
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Parameters">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="Height">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:integer">
+                                <xsd:minInclusive value="0" />
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="Width">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:integer">
+                                <xsd:minInclusive value="0" />
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="Length">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:integer">
+                                <xsd:minInclusive value="0" />
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Price">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:float">
+                    <xsd:minInclusive value="0" />
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="Id" type="xsd:ID" use="required" />
+    </xsd:complexType>
+  </xsd:element>
+</xs:schema>

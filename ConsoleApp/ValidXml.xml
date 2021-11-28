@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Plane Id="newid">
+    <Model>F-15E Strike Eagle</Model>
+    <Origin>USA</Origin>
+    <Chars>
+        <PlaneChar>
+            <Type>Fighter</Type>
+            <PlaceNumber>1</PlaceNumber>
+            <HasAmmunition>true</HasAmmunition>
+            <RocketNumber>5</RocketNumber>
+            <HasRadar>true</HasRadar>
+        </PlaneChar>
+        <PlaneChar>
+            <Type>Support</Type>
+            <PlaceNumber>1</PlaceNumber>
+            <HasAmmunition>false</HasAmmunition>
+            <RocketNumber>0</RocketNumber>
+            <HasRadar>true</HasRadar>
+        </PlaneChar>
+    </Chars>
+    <Parameters>
+        <Height>6</Height>
+        <Width>10</Width>
+        <Length>20</Length>
+    </Parameters>
+    <Price>10000</Price>
+</Plane>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+
+<Plane Id="newid">
+    <Model>F-15E Strike Eagle</Model>
+    <Origin>USA</Origin>
+    <Chars>
+        <PlaneChar>
+            <Type>InvalidType</Type>
+            <PlaceNumber>5</PlaceNumber>
+            <RocketNumber>100</RocketNumber>
+        </PlaneChar>
+    </Chars>
+    <Parameters>
+        <Height>-10</Height>
+        <Width>-10</Width>
+        <Length>-10</Length>
+    </Parameters>
+    <Price>-10000</Price>
+</Plane>
